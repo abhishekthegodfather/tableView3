@@ -13,6 +13,8 @@
 		84E34BC8291F9C930021DA68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E34BC6291F9C930021DA68 /* Main.storyboard */; };
 		84E34BCA291F9C990021DA68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E34BC9291F9C990021DA68 /* Assets.xcassets */; };
 		84E34BCD291F9C990021DA68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E34BCB291F9C990021DA68 /* LaunchScreen.storyboard */; };
+		84E34BD6291FD0E20021DA68 /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E34BD4291FD0E20021DA68 /* SimpleTableViewCell.swift */; };
+		84E34BD7291FD0E20021DA68 /* SimpleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E34BD5291FD0E20021DA68 /* SimpleTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		84E34BC9291F9C990021DA68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84E34BCC291F9C990021DA68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84E34BCE291F9C990021DA68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84E34BD4291FD0E20021DA68 /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
+		84E34BD5291FD0E20021DA68 /* SimpleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				84E34BC2291F9C930021DA68 /* SceneDelegate.swift */,
 				84E34BC4291F9C930021DA68 /* ViewController.swift */,
 				84E34BC6291F9C930021DA68 /* Main.storyboard */,
+				84E34BD4291FD0E20021DA68 /* SimpleTableViewCell.swift */,
+				84E34BD5291FD0E20021DA68 /* SimpleTableViewCell.xib */,
 				84E34BC9291F9C990021DA68 /* Assets.xcassets */,
 				84E34BCB291F9C990021DA68 /* LaunchScreen.storyboard */,
 				84E34BCE291F9C990021DA68 /* Info.plist */,
@@ -126,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E34BCD291F9C990021DA68 /* LaunchScreen.storyboard in Resources */,
+				84E34BD7291FD0E20021DA68 /* SimpleTableViewCell.xib in Resources */,
 				84E34BCA291F9C990021DA68 /* Assets.xcassets in Resources */,
 				84E34BC8291F9C930021DA68 /* Main.storyboard in Resources */,
 			);
@@ -139,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E34BC5291F9C930021DA68 /* ViewController.swift in Sources */,
+				84E34BD6291FD0E20021DA68 /* SimpleTableViewCell.swift in Sources */,
 				84E34BC1291F9C930021DA68 /* AppDelegate.swift in Sources */,
 				84E34BC3291F9C930021DA68 /* SceneDelegate.swift in Sources */,
 			);
