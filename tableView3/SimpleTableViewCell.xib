@@ -17,13 +17,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSp-Ya-TYD">
-                        <rect key="frame" x="20" y="-14" width="147" height="131"/>
+                        <rect key="frame" x="20" y="-58" width="124" height="219"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSY-Sz-4Y3">
-                        <rect key="frame" x="214" y="35.5" width="56" height="32"/>
+                        <rect key="frame" x="171.5" y="35.5" width="56" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="56" id="Lhq-yH-Ktu"/>
                         </constraints>
@@ -33,7 +33,7 @@
                         </buttonConfiguration>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0w-7e-B5Y">
-                        <rect key="frame" x="297" y="35.5" width="70" height="32"/>
+                        <rect key="frame" x="247.5" y="35.5" width="70" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="70" id="hmd-G8-Iat"/>
                         </constraints>
@@ -42,20 +42,30 @@
                             <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                         </buttonConfiguration>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFN-By-uyA">
+                        <rect key="frame" x="334" y="35.5" width="51.5" height="32"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Add">
+                            <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                        </buttonConfiguration>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="sSp-Ya-TYD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="OLT-sX-i8E"/>
-                    <constraint firstItem="f0w-7e-B5Y" firstAttribute="leading" secondItem="dSY-Sz-4Y3" secondAttribute="trailing" constant="27" id="TCg-U2-raQ"/>
-                    <constraint firstItem="sSp-Ya-TYD" firstAttribute="centerY" secondItem="dSY-Sz-4Y3" secondAttribute="centerY" id="Ud7-1s-dGm"/>
-                    <constraint firstItem="sSp-Ya-TYD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-25" id="d6B-dZ-zTu"/>
-                    <constraint firstItem="dSY-Sz-4Y3" firstAttribute="baseline" secondItem="f0w-7e-B5Y" secondAttribute="baseline" id="hOi-cv-uzO"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="f0w-7e-B5Y" secondAttribute="trailing" constant="12" id="iDD-jf-MwK"/>
-                    <constraint firstItem="dSY-Sz-4Y3" firstAttribute="leading" secondItem="sSp-Ya-TYD" secondAttribute="trailing" constant="47" id="myj-FV-WE5"/>
-                    <constraint firstItem="sSp-Ya-TYD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="q4v-4V-Jsa"/>
+                    <constraint firstItem="f0w-7e-B5Y" firstAttribute="leading" secondItem="dSY-Sz-4Y3" secondAttribute="trailing" constant="20" id="362-Fv-hxi"/>
+                    <constraint firstItem="sSp-Ya-TYD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="CVs-13-c2W"/>
+                    <constraint firstItem="f0w-7e-B5Y" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="LUZ-5z-bte"/>
+                    <constraint firstItem="sSp-Ya-TYD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-69" id="TyE-jg-Bj9"/>
+                    <constraint firstItem="WFN-By-uyA" firstAttribute="leading" secondItem="f0w-7e-B5Y" secondAttribute="trailing" constant="16.5" id="h4T-6R-U7y"/>
+                    <constraint firstItem="f0w-7e-B5Y" firstAttribute="baseline" secondItem="dSY-Sz-4Y3" secondAttribute="baseline" id="jw0-9h-ohO"/>
+                    <constraint firstItem="f0w-7e-B5Y" firstAttribute="centerY" secondItem="sSp-Ya-TYD" secondAttribute="centerY" id="jyo-Z9-eYw"/>
+                    <constraint firstItem="f0w-7e-B5Y" firstAttribute="baseline" secondItem="WFN-By-uyA" secondAttribute="baseline" id="kCd-5P-95E"/>
+                    <constraint firstItem="dSY-Sz-4Y3" firstAttribute="leading" secondItem="sSp-Ya-TYD" secondAttribute="trailing" constant="27.5" id="w4k-H9-5c1"/>
+                    <constraint firstAttribute="trailing" secondItem="f0w-7e-B5Y" secondAttribute="trailing" constant="81.5" id="xOI-gE-eg5"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="addLabelThing" destination="WFN-By-uyA" id="cg0-FY-9kl"/>
                 <outlet property="deleteLabelThing" destination="f0w-7e-B5Y" id="7Jg-ff-wnQ"/>
                 <outlet property="editLabelThing" destination="dSY-Sz-4Y3" id="fXR-0m-JZQ"/>
                 <outlet property="textLabelThing" destination="sSp-Ya-TYD" id="qKn-mZ-os2"/>

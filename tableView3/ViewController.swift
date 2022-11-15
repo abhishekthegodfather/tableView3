@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return nameArray.count
     }
     
@@ -28,6 +29,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         cell.editLabelThing.addTarget(self, action: #selector(editButtonTapped(_ :)), for: .touchUpInside)
         
+        cell.addLabelThing.addTarget(self, action: #selector(addButtonTapped(_ :)), for: .touchUpInside)
         return cell
     }
     
@@ -36,6 +38,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
+    @objc func addButtonTapped(_ sender: UIButton){
+        
+        
+        let point = sender.convert(CGPoint.zero, to: myTableView)
+        guard let indexPath = myTableView.indexPathForRow(at: point) else {
+            return
+        }
+    
+        nameArray.insert("New Name", at: indexPath.row)
+        let indexPath1:IndexPath = IndexPath(row: indexPath.row+1, section:0)
+        
+        print(indexPath.row)
+        myTableView.insertRows(at: [indexPath1], with: UITableView.RowAnimation.left)
+    }
     
     @objc func editButtonTapped(_ sender: UIButton){
         let point = sender.convert(CGPoint.zero, to: myTableView)
@@ -48,7 +64,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let dialog = UIAlertController(title: "Edit Things", message: "Editing the names", preferredStyle: UIAlertController.Style.alert)
         
-        let update = UIAlertAction(title: "upadte", style: UIAlertAction.Style.default) { (action) in
+        let update = UIAlertAction(title: "update", style: UIAlertAction.Style.default) { (action) in
             let update_name = self.cname?.text!
             self.nameArray[indexPath.row] = update_name!
             DispatchQueue.main.async {
@@ -74,14 +90,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
-    @IBAction func addActions(_ sender: UIButton) {
-        nameArray.insert("New Name", at: 0)
-        
-        let indexPath:IndexPath = IndexPath(row:(self.nameArray.count - 1), section:0)
-        
-        myTableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.left)
-        
-    }
+//    @IBAction func addActions(_ sender: UIButton) {
+//        nameArray.insert("New Name", at: 0)
+//
+//        let indexPath:IndexPath = IndexPath(row:0, section:0)
+//        print(indexPath)
+//
+//
+//        myTableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.left)
+//
+//    }
     
     
     
@@ -91,14 +109,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             return
         }
         
-        nameArray.remove(at: indexPath.row)
-        myTableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.right)
+        if indexPath.row > 0{
+            nameArray.remove(at: indexPath.row)
+            myTableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.right)
+        }
+        
+        
+        
+//        nameArray.remove(at: indexPath.row)
+//        myTableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.right)
     }
     
     
     @IBOutlet weak var myTableView: UITableView!
     
     
+    @IBOutlet weak var addbtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,9 +133,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         myTableView.register(UINib(nibName: "SimpleTableViewCell", bundle: nil), forCellReuseIdentifier: "cellStruct")
         myTableView.dataSource = self
         myTableView.delegate = self
+    
+        
+        nameArray.append("New Name")
         
     }
-
-
 }
+
+
 

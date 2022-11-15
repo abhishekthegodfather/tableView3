@@ -16,6 +16,10 @@ class SimpleTableViewCell: UITableViewCell {
     
     @IBOutlet weak var editLabelThing: UIButton!
     
+    
+    @IBOutlet weak var addLabelThing: UIButton!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

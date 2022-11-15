@@ -17,29 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="umv-aV-Bns">
-                                <rect key="frame" x="0.0" y="121" width="414" height="775"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoA-uW-hXi">
-                                <rect key="frame" x="280" y="57" width="90" height="56"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="ADD"/>
-                                <connections>
-                                    <action selector="addActions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EKg-gv-GyG"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="umv-aV-Bns" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="77" id="83C-Mn-NWO"/>
                             <constraint firstAttribute="bottom" secondItem="umv-aV-Bns" secondAttribute="bottom" id="AID-qJ-bl6"/>
-                            <constraint firstItem="LoA-uW-hXi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="AfC-Ec-Ilx"/>
-                            <constraint firstItem="umv-aV-Bns" firstAttribute="top" secondItem="LoA-uW-hXi" secondAttribute="bottom" constant="8" id="C6Y-K3-9HB"/>
                             <constraint firstItem="umv-aV-Bns" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Gqd-V2-0H6"/>
+                            <constraint firstItem="umv-aV-Bns" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ISK-S8-8Fh"/>
                             <constraint firstItem="umv-aV-Bns" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LBm-JM-0Z4"/>
-                            <constraint firstItem="LoA-uW-hXi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="280" id="pMP-7l-mdE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LoA-uW-hXi" secondAttribute="trailing" constant="44" id="vIU-RI-cz0"/>
                         </constraints>
                     </view>
                     <connections>
